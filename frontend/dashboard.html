@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Classroom - الصفحة الرئيسية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', sans-serif; background-color: #fff; }
+        .sidebar-item:hover { background-color: #f1f3f4; border-radius: 0 25px 25px 0; }
+        .active-link { background-color: #e8f0fe; color: #1967d2; border-radius: 0 25px 25px 0; }
+        .google-btn { border: 1px solid #dadce0; transition: background 0.2s; }
+        .google-btn:hover { background-color: #f8f9fa; }
+    </style>
+</head>
+<body class="flex flex-col h-screen">
+
+    <nav class="flex items-center justify-between px-4 py-2 border-b border-gray-200">
+        <div class="flex items-center gap-4">
+            <button class="p-2 hover:bg-gray-100 rounded-full text-gray-600">
+                <svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+            </button>
+            <div class="flex items-center gap-2">
+                <span class="text-[22px] text-[#5f6368]">Classroom</span>
+                <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24dp.svg" class="h-6" alt="Google">
+            </div>
+        </div>
+        
+        <div class="flex items-center gap-2">
+            <button class="p-2 hover:bg-gray-100 rounded-full text-gray-600">
+                <svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path></svg>
+            </button>
+            <button class="p-2 hover:bg-gray-100 rounded-full text-gray-600">
+                <svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm12 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-12 4c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm12 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-12 4c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm12 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></svg>
+            </button>
+            <div class="w-8 h-8 rounded-full bg-blue-600 ml-2"></div>
+        </div>
+    </nav>
+
+    <div class="flex flex-1 overflow-hidden">
+        
+        <aside class="w-64 border-l border-gray-200 py-4 flex flex-col gap-1 overflow-y-auto">
+            <div class="sidebar-item active-link px-6 py-3 flex items-center gap-4 cursor-pointer">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg>
+                <span class="text-sm font-medium">الصفحة الرئيسية</span>
+            </div>
+            <div class="sidebar-item px-6 py-3 flex items-center gap-4 cursor-pointer text-gray-600">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                <span class="text-sm">تقويم Google</span>
+            </div>
+            <hr class="my-2 border-gray-200">
+            <div class="sidebar-item px-6 py-3 flex items-center gap-4 cursor-pointer text-gray-600">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
+                <span class="text-sm">الصفوف المؤرشفة</span>
+            </div>
+            <div class="sidebar-item px-6 py-3 flex items-center gap-4 cursor-pointer text-gray-600">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path></svg>
+                <span class="text-sm">الإعدادات</span>
+            </div>
+        </aside>
+
+        <main class="flex-1 flex flex-col items-center justify-center p-8 relative">
+            
+            <div class="absolute top-10 right-10 text-[11px] text-gray-500 max-w-[150px] leading-tight text-center">
+                <svg class="w-8 h-8 mb-2 mx-auto rotate-[-45deg]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+                إذا لم تكن صفوفك ظاهرة، يُرجى تجربة حساب آخر.
+            </div>
+
+            <div class="flex flex-col items-center text-center">
+                <div class="w-64 h-64 mb-6 bg-no-repeat bg-center opacity-80" style="background-image: url('https://www.gstatic.com/classroom/empty_states_all.png'); background-size: contain;"></div>
+                <p class="text-gray-600 mb-8 text-sm">أضف صفاً للبدء.</p>
+                
+                <div class="flex gap-3">
+                    <button class="bg-[#1a73e8] text-white px-6 py-2 rounded font-medium text-sm hover:bg-[#1557b0] shadow-sm">الانضمام إلى الصف</button>
+                    <button class="google-btn text-[#1a73e8] px-6 py-2 rounded font-medium text-sm">إنشاء صف</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
