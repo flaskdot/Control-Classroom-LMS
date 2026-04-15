@@ -1,0 +1,23 @@
+// نحدد عنصر الفيديو في الصفحة
+const video = document.querySelector('video');
+let watchedPercentage = 0;
+
+video.ontimeupdate = () => {
+    // حساب النسبة المئوية لما شاهده الطالب فعلياً
+    const progress = (video.currentTime / video.duration) * 100;
+    if (progress > watchedPercentage) watchedPercentage = progress;
+};
+
+// عند انتهاء الفيديو، نرسل تقريراً للمدرس
+video.onended = () => {
+    if (watchedPercentage > 95) {
+        alert("تم تسجيل إكمال المشاهدة بنجاح ✅");
+        sendTrackingData('video_complete', { status: 'full' });
+    }
+};
+
+// تتبع زر التحميل
+function trackDownload(fileName) {
+    sendTrackingData('file_download', { file: fileName, time: new Date() });
+    alert("تنبيه: تم تسجيل أنك قمت بتحميل الملف بدلاً من مشاهدته هنا.");
+}
